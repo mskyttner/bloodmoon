@@ -12,6 +12,12 @@ This repo is a test using the redbean application server with the "fullmoon" fra
 It is a simple test trying out the "fullmoon" lua web framework with a dynamic database with three tables/entities - products, reviews and prices. The solution is packaged as a container and the application provides some routes / API endpoints for those entities (a "backend") and a very very simplistic "frontend" part capable of providing a product listing and some product details (json).
 
 
+## Oneliner
+
+Run this command and then open "http://localhost:8080"
+
+        podman run --rm -p "8080:8080" ghcr.io/mskyttner/bloodmoon
+
 ## Synthetic data
 
 This step is not required because `synth.db` is already provided in the repo.
