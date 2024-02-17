@@ -1,5 +1,7 @@
 # bloodmoon
 
+![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fak2.picdn.net%2Fshutterstock%2Fvideos%2F10294082%2Fthumb%2F12.jpg&f=1&nofb=1&ipt=18d371abeac05fa4cb2ea95bb44701aa16327c4474e62a5de240ceabf5be78e0&ipo=images)
+
 This repo is a test using the redbean application server with the "fullmoon" framework for lua-based web applications. Learn more about [redbean, the cosmopolitan libc-based redbean application server](https://justine.lol/redbean2/). This seems to offer good performance according to these benchmarks:
 
 - https://github.com/pkulchenko/fullmoon?tab=readme-ov-file#benchmark
@@ -9,7 +11,10 @@ This repo is a test using the redbean application server with the "fullmoon" fra
 
 It is a simple test trying out the "fullmoon" lua web framework with a dynamic database with three tables/entities - products, reviews and prices. The solution is packaged as a container and the application provides some routes / API endpoints for those entities (a "backend") and a very very simplistic "frontend" part capable of providing a product listing and some product details (json).
 
-## Usage
+
+## Synthetic data
+
+This step is not required because `synth.db` is already provided in the repo.
 
 Synthetic data for products, reviews and prices (10 000 of each) was generated using:
 
@@ -17,9 +22,13 @@ Synthetic data for products, reviews and prices (10 000 of each) was generated u
 
 This uses an R script which synthesizes data based on some .json files provided in the repo. The result is the `synth.db`sqlite3 database.
 
+## Usage
+
+The `Makefile` makes use of `podman` and `httpie` (see [httpie](https://httpie.io/)) and wrk2 (containerized, but see [GitHub repo here](https://github.com/giltene/wrk2)).
+
 When doing `make build`, this database is embedded and used from within the redbean web server which also includes an application utilizing the fullmoon.lua web framework, with the (simplistic!) application code in `.init.lua`.
 
-To run and benchmark the service, use the `Makefile`:
+Use the `Makefile` to build, start and benchmark etc.
 
         # build a container, 24.6 MB including everything (redbean, fullmoon, application, database)
         make build
@@ -42,5 +51,7 @@ To run and benchmark the service, use the `Makefile`:
         # clean up
         make clean
 
-The `Makefile` makes use of `podman` and `httpie` (see [httpie](https://httpie.io/)) and wrk2 (containerized, but see [GitHub repo here](https://github.com/giltene/wrk2)).
+## Bare-metal build
+
+A `build_metal_ape.sh` script is provided for those who might want to build a portable application locally for this project.
 
