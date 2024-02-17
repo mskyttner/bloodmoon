@@ -18,6 +18,10 @@ Run this command and then open "http://localhost:8080"
 
         podman run --rm -p "8080:8080" ghcr.io/mskyttner/bloodmoon
 
+You can also download the [binary](https://justine.lol/cosmo3/#overview) and run it, [if you dare](https://justine.lol/ape.html):
+
+        wget https://github.com/mskyttner/bloodmoon/raw/main/redbean.com && chmod +x ./redbean.com && ./redbean.com
+
 ## Synthetic data
 
 This step is not required because `synth.db` is already provided in the repo.
