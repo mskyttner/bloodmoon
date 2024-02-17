@@ -1,0 +1,26 @@
+[
+  {
+    "productId": "b18a3ac9-015a-4393-83f8-2b118a209e9b",
+    "rating": 5,
+    "comment": "Very heavy!",
+    "commenter": "Wile E. Coyote"
+  },
+  {
+    "productId": "b18a3ac9-015a-4393-83f8-2b118a209e9b",
+    "rating": 4,
+    "comment": "Fairly noticeable, easy to avoid. Makes a whistling sound when dropped from a cliff.",
+    "commenter": "Road Runner"
+  },
+  {
+    "productId": "3dfde733-2171-4a91-94ed-be1f2cab1cb0",
+    "rating": 5,
+    "comment": "What a launch!",
+    "commenter": "Road Runner"
+  },
+  {
+    "productId": "3dfde733-2171-4a91-94ed-be1f2cab1cb0",
+    "rating": 1,
+    "comment": "This product is WAAAAY too overpowered for my use case! Would not buy again.",
+    "commenter": "Wile E. Coyote, currently in low-earth orbit"
+  }
+]
