@@ -14,11 +14,11 @@ It is a simple test trying out the "fullmoon" lua web framework with a dynamic d
 
 ## Oneliner
 
-Run this command and then open "http://localhost:8080"
+Run this command (which downloads a 25.4 MB container image and starts it) and then open "http://localhost:8080"
 
         podman run --rm -p "8080:8080" ghcr.io/mskyttner/bloodmoon
 
-You can also download the [binary](https://justine.lol/cosmo3/#overview) and run it, [if you dare](https://justine.lol/ape.html):
+You can also download the smaller (3.2 MB of which 2.3 MB is taken by the embedded sqlite3 database) [binary](https://justine.lol/cosmo3/#overview) and run it, [if you dare](https://justine.lol/ape.html):
 
         wget https://github.com/mskyttner/bloodmoon/raw/main/redbean.com && chmod +x ./redbean.com && ./redbean.com
 
